@@ -9,6 +9,11 @@ public class Node {
     public Node(String value) {
         this.value = value;
     }
+    
+    public void alfa(){
+        //alfaMethod
+    }
+    
     public String getValue() {
         return value;
     }
