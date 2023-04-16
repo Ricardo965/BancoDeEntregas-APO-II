@@ -12,6 +12,8 @@ public class Manager {
 
     public static void menu() {
         System.out.println("""
+                Bienvenido
+
                 1. Ingresar un país
                 2. Mostrar medallería
                 3. Mostrar total de medallas
@@ -20,7 +22,9 @@ public class Manager {
         String opt = reader.nextLine();
         switch (opt) {
             case "1":
-                System.out.println("Ingrese el país con el siguiente formato: Colombia::oro::3 ");
+                System.out.println("Ingrese el país con el siguiente formato: PAIS::TipoDeMedalla::Cantidad ");
+                System.out.println("Tipos de medalla: Oro, Plata, Bronce. ");
+                System.out.println("Ejemplo: Colombia::oro::3");
                 String countryToAdd = reader.nextLine();
                 if (controller.addCountry(countryToAdd)) {
                     System.out.println("Operación exitosa");
