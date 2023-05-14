@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seg14.seg14.HelloController">
+   <children>
+      <Label layoutX="287.0" layoutY="108.0" text="Monto" />
+      <Label layoutX="273.0" layoutY="174.0" text="Descripción" />
+      <ComboBox fx:id="typeCB" layoutX="230.0" layoutY="241.0" prefWidth="150.0" promptText="Tipo" />
+      <TextField fx:id="amountTF" layoutX="230.0" layoutY="138.0" />
+      <TextField fx:id="descriptionTF" layoutX="230.0" layoutY="200.0" />
+      <DatePicker fx:id="datePickerDP" layoutX="217.0" layoutY="312.0" />
+      <Label layoutX="289.0" layoutY="286.0" text="Fecha" />
+      <Label layoutX="187.0" layoutY="14.0" text="Banco Alfa">
+         <font>
+            <Font name="Bauhaus 93" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="235.0" layoutY="68.0" text="Realizar registro">
+         <font>
+            <Font name="Berlin Sans FB" size="21.0" />
+         </font>
+      </Label>
+      <Button layoutX="275.0" layoutY="354.0" mnemonicParsing="false" onAction="#saveReg" text="Guardar" />
+   </children>
+</AnchorPane>
