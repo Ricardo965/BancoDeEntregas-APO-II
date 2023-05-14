@@ -25,9 +25,6 @@ public class AlfaTableController implements Initializable {
     private TableColumn<Register, String> descriptionColumn;
 
     @FXML
-    private TableColumn<Register, String> typeColumn;
-
-    @FXML
     private RadioButton expendRB;
 
     @FXML
@@ -104,7 +101,7 @@ public class AlfaTableController implements Initializable {
 
         registryTableTB.setItems(RegisterList.getInstance().getListOfRegisters());
         updateColor();
-
+        dateColumn.getComparator();
 
         balanceLabel.setText("Balance: " + String.valueOf(calculateTotalIncome() - calculateTotalExpense()));
         balanceLabel.autosize();
