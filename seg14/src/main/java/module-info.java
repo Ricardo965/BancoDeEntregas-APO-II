@@ -5,4 +5,8 @@ module com.seg14.seg14 {
 
     opens com.seg14.seg14 to javafx.fxml;
     exports com.seg14.seg14;
+
+    opens com.seg14.seg14.model to javafx.fxml;
+    exports com.seg14.seg14.model;
+
 }

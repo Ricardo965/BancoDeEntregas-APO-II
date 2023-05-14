@@ -8,16 +8,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="556.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seg14.seg14.AlfaTableController">
+<AnchorPane prefHeight="554.0" prefWidth="869.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seg14.seg14.AlfaTableController">
    <children>
-      <TableView fx:id="registryTableTB" layoutX="80.0" layoutY="130.0" prefHeight="332.0" prefWidth="438.0">
+      <TableView fx:id="registryTableTB" layoutX="24.0" layoutY="130.0" prefHeight="332.0" prefWidth="822.0">
         <columns>
-            <TableColumn fx:id="amountColumn" prefWidth="96.79998779296875" text="Monto" />
-          <TableColumn fx:id="dateColumn" prefWidth="110.4000244140625" text="Fecha" />
-          <TableColumn fx:id="descriptionColumn" prefWidth="231.20001220703125" text="Descripción" />
+            <TableColumn fx:id="amountColumn" prefWidth="187.1999740600586" text="Monto" />
+          <TableColumn fx:id="dateColumn" minWidth="0.0" prefWidth="188.0" text="Fecha" />
+          <TableColumn fx:id="descriptionColumn" prefWidth="256.0001525878906" text="Descripción" />
+            <TableColumn fx:id="typeColumn" minWidth="0.0" prefWidth="188.0" text="Tipo" />
         </columns>
       </TableView>
-      <Label layoutX="80.0" layoutY="484.0" prefHeight="26.0" prefWidth="53.0" text="Total: ">
+      <Label fx:id="balanceLabel" layoutX="54.0" layoutY="510.0" prefHeight="26.0" prefWidth="330.0">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Label>
@@ -26,14 +27,17 @@
             <Font name="System Bold" size="12.0" />
          </font></Button>
       <RadioButton fx:id="incomeRB" layoutX="149.0" layoutY="99.0" mnemonicParsing="false" onAction="#filterIncome" text="Ingresos" />
-      <RadioButton fx:id="expendRB" layoutX="284.0" layoutY="99.0" mnemonicParsing="false" onAction="#filterExpends" text="Gastos" />
-      <RadioButton fx:id="generalBalanceRB" layoutX="401.0" layoutY="99.0" mnemonicParsing="false" onAction="#filterGeneralBalance" text="General" />
-      <Label layoutX="216.0" layoutY="14.0" text="Banco Alfa">
+      <RadioButton fx:id="expendRB" layoutX="310.0" layoutY="99.0" mnemonicParsing="false" onAction="#filterExpends" text="Gastos" />
+      <RadioButton fx:id="generalBalanceRB" layoutX="454.0" layoutY="99.0" mnemonicParsing="false" onAction="#filterGeneralBalance" text="General" />
+      <Label layoutX="255.0" layoutY="14.0" text="Banco Alfa">
          <font>
             <Font name="Lucida Sans Unicode" size="33.0" />
          </font>
       </Label>
       <Label layoutX="454.0" layoutY="59.0" text="El banco de la gente" />
-      <Label fx:id="totalLabel" layoutX="134.0" layoutY="488.0" prefHeight="18.0" prefWidth="73.0" />
+      <Label fx:id="totalLabel" layoutX="54.0" layoutY="473.0" prefHeight="22.0" prefWidth="330.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
    </children>
 </AnchorPane>

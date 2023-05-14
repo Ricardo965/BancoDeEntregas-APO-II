@@ -1,5 +1,7 @@
+package com.seg14.seg14.model;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.Initializable;
 
 import java.util.ArrayList;
 
@@ -25,20 +27,20 @@ public class RegisterList {
         this.listOfRegisters = listOfContacts;
     }
 
-    public ArrayList<Income> incomeFilter(){
-        ArrayList<Income> out = new ArrayList<>();
+    public ObservableList<Registrable> incomeFilter(){
+        ObservableList<Registrable> out = FXCollections.observableArrayList();
         for (Registrable r : instance.getListOfRegisters()) {
             if (r instanceof Income){
-                out.add((Income) r);
+                out.add(r);
             }
         }
         return out;
     }
-    public ArrayList<Expense> expenseFilter(){
-        ArrayList<Expense> out = new ArrayList<>();
+    public ObservableList<Registrable> expenseFilter(){
+        ObservableList<Registrable> out = FXCollections.observableArrayList();
         for (Registrable r : instance.getListOfRegisters()) {
             if (r instanceof Expense){
-                out.add((Expense) r);
+                out.add(r);
             }
         }
         return out;

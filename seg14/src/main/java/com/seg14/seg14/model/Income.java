@@ -1,3 +1,4 @@
+package com.seg14.seg14.model;
 import java.util.Date;
 
 public class Income extends Register implements Registrable{
