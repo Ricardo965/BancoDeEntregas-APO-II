@@ -17,7 +17,7 @@
           <TableColumn fx:id="descriptionColumn" prefWidth="281.5999755859375" text="Descripción" />
         </columns>
       </TableView>
-      <Label fx:id="balanceLabel" layoutX="54.0" layoutY="510.0" prefHeight="26.0" prefWidth="586.0">
+      <Label fx:id="balanceLabel" layoutX="24.0" layoutY="510.0" prefHeight="26.0" prefWidth="616.0">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Label>
@@ -34,7 +34,7 @@
          </font>
       </Label>
       <Label layoutX="698.0" layoutY="59.0" text="El banco de la gente" />
-      <Label fx:id="totalLabel" layoutX="54.0" layoutY="473.0" prefHeight="22.0" prefWidth="585.0">
+      <Label fx:id="totalLabel" layoutX="24.0" layoutY="473.0" prefHeight="22.0" prefWidth="616.0">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Label>

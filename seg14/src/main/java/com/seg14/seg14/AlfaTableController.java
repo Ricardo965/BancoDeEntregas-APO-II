@@ -44,6 +44,8 @@ public class AlfaTableController implements Initializable {
 
     @FXML
     void filterExpends(ActionEvent event) {
+        RegisterList.getInstance().getListOfRegisters().sort(((o1, o2) -> ((Register)o2).getRegDate().compareTo(((Register)o1).getRegDate())));
+
         amountColumn.setCellValueFactory(new PropertyValueFactory<>("amount"));
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("regDate"));
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
@@ -57,6 +59,8 @@ public class AlfaTableController implements Initializable {
 
     @FXML
     void filterGeneralBalance(ActionEvent event) {
+        RegisterList.getInstance().getListOfRegisters().sort(((o1, o2) -> ((Register)o2).getRegDate().compareTo(((Register)o1).getRegDate())));
+
         amountColumn.setCellValueFactory(new PropertyValueFactory<>("amount"));
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("regDate"));
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
@@ -68,6 +72,9 @@ public class AlfaTableController implements Initializable {
 
     @FXML
     void filterIncome(ActionEvent event) {
+
+        RegisterList.getInstance().getListOfRegisters().sort(((o1, o2) -> ((Register)o2).getRegDate().compareTo(((Register)o1).getRegDate())));
+
         amountColumn.setCellValueFactory(new PropertyValueFactory<>("amount"));
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("regDate"));
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
@@ -95,13 +102,16 @@ public class AlfaTableController implements Initializable {
         generalBalanceRB.fire();
         expendRB.setToggleGroup(tgl);
 
+
+        RegisterList.getInstance().getListOfRegisters().sort(((o1, o2) -> ((Register)o2).getRegDate().compareTo(((Register)o1).getRegDate())));
+
         amountColumn.setCellValueFactory(new PropertyValueFactory<>("amount"));
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("regDate"));
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
 
         registryTableTB.setItems(RegisterList.getInstance().getListOfRegisters());
+
         updateColor();
-        dateColumn.getComparator();
 
         balanceLabel.setText("Balance: " + String.valueOf(calculateTotalIncome() - calculateTotalExpense()));
         balanceLabel.autosize();
